@@ -1,3 +1,4 @@
+console.log('JS Sourced')
 var values = {};
 
 $(document).ready(function(){
