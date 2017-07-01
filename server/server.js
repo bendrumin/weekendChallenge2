@@ -35,7 +35,7 @@ app.post('/division', function(req,res){
 // server static files
 
 app.get("/*", function(req, res) {  //function catches anything in the folder
-  console.log('got a request!, req:', req.params[0]);
+  console.log('This is just a simple request', req.params[0]);
 
 var file = req.params[0] || "/views/index.html";
 res.sendFile(path.join(__dirname, "/public/", file));

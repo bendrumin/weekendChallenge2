@@ -5,6 +5,7 @@
   <title>Calculater!</title>
   <script type="text/javascript" src="vendors/jquery.js"></script>
   <script type="text/javascript" src="scripts/client.js"></script>
+  <link rel="stylesheet" href="styles.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 </head>
@@ -12,20 +13,25 @@
   <div class="container">
     <h1>Calculator</h1>
 
+<div class="row">
+  <div class="col-sm-6">
     <div class="numberInput">
-      <input type="number" id="firstNumber" />
-      <input type="number" id="secondNumber" />
+        <input type="number" id="firstNumber" size="20" placeholder="Number" />
+        <input type="number" id="secondNumber" size="20" placeholder="Number"/>
+        <span class="equalSign">&#61;</span>
     </div>
+  </div>
+    <div class="col-sm-6">
+      <div id='showMeTheAnswer'></div>
+  </div>
+</div>
     <div class="mainContainer">
-      <ul>
-        <li><button id="addition">Add</button></li>
-        <li><button id="subtraction">Subtract</button></li>
-        <li><button id="multiplication">Multiply</button></li>
-        <li><button id="divide">Divide</button></li>
-        <li><button id="clear">Clear</button></li>
-      </ul>
+      <button id="addition" class="btn btn-primary btn-lg">Add</button>
+      <button id="subtraction" class="btn btn-primary btn-lg">Subtract</button>
+      <button id="multiplication" class="btn btn-primary btn-lg">Multiply</button>
+      <button id="divide" class="btn btn-primary btn-lg">Divide</button>
+      <button id="clear"class="btn btn-primary btn-lg" >Clear</button>
     </div>
-    <div id='showMeTheAnswer'></div>
   </div>
 </body>
 </html>
