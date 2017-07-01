@@ -2,7 +2,6 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var port = 5000;
-var values = {};
 var path = require ("path");
 
 app.use(express.static('server/public'));
@@ -11,11 +10,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 //Begining of functions
 app.post('/addition', function(req,res){
   values = req.body;
-  var addAmount = parseInt(values.a) + parseInt(values.b);
-  res.send(addAmount + '');
+  var addAmount = parseInt(values.a) + parseInt(values.b);  //Actuall Math goes here
+  console.log(addAmount); //Should print out the math in the server
+  res.send(addAmount + ''); //Sends to server an empty ammount
 });
 
-app.post('/subtraction', function(req,res){
+app.post('/subtraction', function(req,res){ //Posts
   values = req.body;
   var subtractAmount = values.a - values.b;
   res.send(subtractAmount + '');

@@ -1,9 +1,16 @@
-console.log('JS Sourced')
+console.log('JS Sourced');
 var values = {};
 
 $(document).ready(function(){
-
+$('.addIcon').hide();
+$('.subtractIcon').hide();
+$('.multiplyIcon').hide();
+$('.divideIcon').hide();
   $('#addition').on('click', function(){
+    $('.addIcon').show();
+    $('.subtractIcon').hide();
+    $('.multiplyIcon').hide();
+    $('.divideIcon').hide();
     values.a = $('#firstNumber').val();
     values.b = $('#secondNumber').val();
     values.type = 'addition';
@@ -14,6 +21,10 @@ $(document).ready(function(){
   });
 
   $('#subtraction').on('click', function(){
+    $('.addIcon').hide();
+    $('.subtractIcon').show();
+    $('.multiplyIcon').hide();
+    $('.divideIcon').hide();
     values.a = $('#firstNumber').val();
     values.b = $('#secondNumber').val();
     values.type = 'subtraction';
@@ -25,6 +36,10 @@ $(document).ready(function(){
   });
 
   $('#multiplication').on('click', function(){
+    $('.addIcon').hide();
+    $('.subtractIcon').hide();
+    $('.multiplyIcon').show();
+    $('.divideIcon').hide();
     console.log('button multiply clicked');
     values.a = $('#firstNumber').val();
     values.b = $('#secondNumber').val();
@@ -37,6 +52,10 @@ $(document).ready(function(){
   });
 
   $('#divide').on('click', function(){
+    $('.addIcon').hide();
+    $('.subtractIcon').hide();
+    $('.multiplyIcon').hide();
+    $('.divideIcon').show();
     values.a = $('#firstNumber').val();
     values.b = $('#secondNumber').val();
     values.type = 'division';
@@ -61,6 +80,7 @@ $(document).ready(function(){
     $('#firstNumber').val('');
     $('#secondNumber').val('');
     $('#showMeTheAnswer').text('');
+    $('.icon').text('');
   });
 
   function additionRequest(){
