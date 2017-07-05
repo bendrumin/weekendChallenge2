@@ -12,25 +12,25 @@ app.post('/addition', function(req,res){
   values = req.body;
   var addAmount = parseInt(values.a) + parseInt(values.b);  //Actuall Math goes here
   console.log(addAmount); //Should print out the math in the server
-  res.sendStatus(200);
+  res.send(addAmount + ''); //Sends to server an the addition answer ammount
 });
 
 app.post('/subtraction', function(req,res){ //Posts
   values = req.body;
   var subtractAmount = values.a - values.b;
-  res.sendStatus(200);
+  res.send(subtractAmount + '');
 });
 
 app.post('/multiplication', function(req,res){
   values = req.body;
   var multiplyAmount = values.a * values.b;
-  res.sendStatus(200);
+  res.send(multiplyAmount + '');
 });
 
 app.post('/division', function(req,res){
   values = req.body;
   var divideAmount = values.a / values.b;
-  res.sendStatus(200);
+  res.send(divideAmount + '');
 });
 // server static files
 
